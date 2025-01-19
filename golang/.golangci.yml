@@ -1,0 +1,53 @@
+run:
+  timeout: 5m
+linters-settings:
+  govet:
+    enable-all: true
+    settings:
+      shadow:
+        strict: true
+linters:
+  disable-all: true
+  enable:
+    - bodyclose
+    - containedctx
+    - durationcheck
+    - errcheck
+    - errname
+    - errorlint
+    - gocheckcompilerdirectives
+    - gocognit
+    - goconst
+    - gocritic
+    - godot
+    - gofumpt
+    - gosec
+    - gosimple
+    - govet
+    - grouper
+    - ineffassign
+    - mnd
+    - musttag
+    - nestif
+    - nilerr
+    - nilnil
+    - noctx
+    - nonamedreturns
+    - predeclared
+    - protogetter
+    - reassign
+    - revive
+    - sloglint
+    - staticcheck
+    - stylecheck
+    - tenv
+    - testifylint
+    - testpackage
+    - typecheck
+    - unconvert
+    - unparam
+    - unused
+    - usestdlibvars
+    - wastedassign
+    - wrapcheck
+
