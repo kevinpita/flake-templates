@@ -15,5 +15,5 @@ A minimal Go development environment with:
 
 Usage:
 ```bash
-nix flake init -t github:kevinpita/flake-templates#golang && echo "use flake" > .envrc && direnv allow
+nix flake init --refresh -t github:kevinpita/flake-templates#golang && echo "use flake" > .envrc && direnv allow
 ```
