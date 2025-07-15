@@ -29,14 +29,16 @@
           pre-commit
         ];
         shellHook = ''
+          projectName=$(basename "$(pwd)" | sed 's/ /-/g')
           if [ ! -f go.mod ]; then
-            go mod init "github.com/kevinpita/$(basename $(pwd))"
+            go mod init "github.com/kevinpita/$projectName"
           fi
 
           if [ ! -d .git ]; then
             git init
             echo "${gitignoreContent}" > .gitignore
             pre-commit install --install-hooks
+            git remote add origin "git@github.com:kevinpita/$projectName.git"
           fi
         '';
       };
