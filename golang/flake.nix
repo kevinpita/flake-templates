@@ -25,6 +25,8 @@
           gofumpt
           golangci-lint
           gopls
+
+          pre-commit
         ];
         shellHook = ''
           if [ ! -f go.mod ]; then
@@ -34,6 +36,7 @@
           if [ ! -d .git ]; then
             git init
             echo "${gitignoreContent}" > .gitignore
+            pre-commit install --install-hooks
           fi
         '';
       };
