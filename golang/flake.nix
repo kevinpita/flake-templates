@@ -37,6 +37,8 @@
           if [ ! -d .git ]; then
             git init
             echo "${gitignoreContent}" > .gitignore
+            git add .
+            git commit -m "Initial commit"
             pre-commit install --install-hooks
             git remote add origin "git@github.com:kevinpita/$projectName.git"
           fi
